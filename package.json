@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/LeloPlayer/ApiBackend/issues"
   },
-  "homepage": "https://github.com/LeloPlayer/ApiBackend#readme"
+  "homepage": "https://github.com/LeloPlayer/ApiBackend#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
 }
