@@ -1,14 +1,24 @@
-// NODE.JS
-//criaçao da API
+const a = require("express")
+const b = require("cors")
 
-const express = require('express') //criaçao da variavel com os poderes de express
-const app = express()
-const porta = 3000;
+const meuServer = a()
+meuServer.use(b())
 
-app.get('/teste', (req, res)=> { // funçao que tem os poderes do express
-    res.send("OLA MUNDO!!")
+meuServer.get('/alunos', (req, res)=>{
+    res.send(
+        [{
+            nome:"testeAAAA",
+            rgm:"123",
+            curso:"ADM"
+        },
+        {
+            nome:"CMMM",
+            rgm:"24",
+            curso:"ADS"
+        }]
+    )
 })
 
-app.listen(porta, ()=>{ // funçao do express que "escuta" sera ouvida na porta 3000, criaçao de um aereo function
-    console.log("Sucesso!! Servidor online.")
-}) 
+meuServer.listen(3069, ()=>{
+    console.log("Está liberado o 3069")
+})
